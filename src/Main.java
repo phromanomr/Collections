@@ -1,23 +1,21 @@
-import java.util.List;
-
 import list.*;
 import list.ordenacaoDePessoas.Povo;
-
+import set.conjuntoDeConvidados.*;
+import set.agendaContatos.*;
+import set.cadastroProdutos.*;
 
 public class Main {
     public static void main(String[] args) {
-        Povo povo = new Povo();
+        SistemaProdutos sistema = new SistemaProdutos();
 
-        povo.adicionarPessoa("Phelipe", 22, 1.80);
-        povo.adicionarPessoa("Phelipe2", 27, 1.78);
-        povo.adicionarPessoa("Phelipe3", 12, 1.58);
-        povo.adicionarPessoa("Phelipe4", 85, 1.74);
-        povo.adicionarPessoa("Phelipe5", 64, 1.76);
+        sistema.adicionarProduto("Queijo", 0, 30, 14);
+        sistema.adicionarProduto("Pão", 1, 0.20, 72);
+        sistema.adicionarProduto("Abacate", 2, 1.30, 19);
+        sistema.adicionarProduto("Tomate", 3, 0.3, 35);
 
-        povo.ordenarPorIdade();
-
-        System.out.println(povo.getPessoas());
+        System.out.println(sistema.exibirProdutosPorNome());
         
-    }
+        System.out.println(sistema.exibirProdutosPorPreco());
 
+    }
 }
